@@ -26,12 +26,11 @@ function buildSchedule() {
 
 function getPayments(amount, rate, term, payment) {
     let payments = [];
-    let balance = amount;
-    let totalInterest = 0;
     let monthlyPrincipal = 0;
     let monthlyInterest = 0;
+    let totalInterest = 0;
     let monthlyTotalInterest = 0;
-
+    let balance = amount;
     for (month = 1; month <= term; month++) {
         monthlyInterest = calcInterest(balance, rate);
         totalInterest += monthlyInterest;
